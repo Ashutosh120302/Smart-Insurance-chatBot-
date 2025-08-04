@@ -1,0 +1,7 @@
+pandas
+numpy
+scikitlearn
+PIL(Pillow)
+OpenCV(CV2)
+re(regex)
+streamlit
