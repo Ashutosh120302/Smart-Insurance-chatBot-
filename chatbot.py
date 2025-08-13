@@ -50,7 +50,7 @@ if uploaded_file:
     if smoker == "Yes" 
     else 0
 
-    if st.button("🚀 Predict Claim Status"):
+    if st.button("Predict Claim Status"):
         full_features = image_features + [bmi, children, is_smoker]
         decision = predict_claim(full_features)
         st.success(f"✅ Claim Status: {decision}")
