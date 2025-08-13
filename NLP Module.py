@@ -41,7 +41,7 @@ table_df = extract_table_rows(text)
 
 # Use the functions
 print("\n=== Extracted Info ===")
-print("Invoice Date:", invoice_date)
+print("Invoice Date:", invoice_date(text))
 print("Pationt Name:", extract_patient_name(text))
 print("Grand Total:", extract_total(text))
 print(table_df)
