@@ -34,11 +34,11 @@ uploaded_file = st.file_uploader("Upload medical bill", type=["jpg", "jpeg", "pn
 if uploaded_file:
     # OCR Text Extraction
     text = extract_text_from_image(uploaded_file)
-    st.text_area("📝 Extracted OCR Text", text, height=250)
+    st.text_area("Extracted OCR Text", text, height=250)
 
     # Extract Features from Image
     image_features = extract_features(text)
-    st.write("💡 Extracted Features from Invoice:", image_features)
+    st.write("Extracted Features from Invoice:", image_features)
 
     # Collect additional user inputs
     st.subheader("➕ Additional Info Required")
@@ -46,7 +46,9 @@ if uploaded_file:
     bmi = st.number_input("Enter your BMI:", min_value=10.0, max_value=50.0, value=22.5, step=0.1)
     children = st.number_input("Number of children:", min_value=0, max_value=10, step=1)
     smoker = st.selectbox("Are you a smoker?", ["No", "Yes"])
-    is_smoker = 1 if smoker == "Yes" else 0
+    is_smoker = 1 
+    if smoker == "Yes" 
+    else 0
 
     if st.button("🚀 Predict Claim Status"):
         full_features = image_features + [bmi, children, is_smoker]
